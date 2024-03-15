@@ -1,0 +1,49 @@
+package com.cts.adb.runners;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.Scanner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.cts.adb.entities.Contact;
+import com.cts.adb.service.ContactService;
+
+@Component
+public class AddressBookSearchView {
+
+	@Autowired
+	private Scanner kbScanner;
+	
+	@Autowired
+	@Qualifier("contactServiceImplWithRepo")
+	private ContactService contactService;
+	
+	public void run() {
+		String cmd = null;
+		
+		while(!"back".equalsIgnoreCase(cmd)) {
+			System.out.println("Cmd (all/mobile/mail/birth/back)? ");
+			cmd = kbScanner.next().toLowerCase();
+			
+			switch(cmd) {
+			case "all":doList(); break;
+			default: System.out.println("Unknown Command");
+			}
+		}
+	}
+	
+	void doList() {
+		List<Contact> contacts = contactService.getAll();
+		
+		if(contacts.isEmpty()) {
+			System.out.println("No contacts recorded as of now");
+		}else {
+			contacts.stream().forEach(System.out::println);
+		}
+	}
+}
