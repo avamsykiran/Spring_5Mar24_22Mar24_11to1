@@ -411,7 +411,7 @@ Spring Framework
                         @Controller
                         public class HomeController{
                             
-                            @RequestMApping("/")                    /* http://localhost:8080 any method like GET or POST*/
+                            @RequestMapping("/")                    /* http://localhost:8080 any method like GET or POST*/
                             public String indexAction(){
                                 return "index";
                             }
@@ -438,3 +438,11 @@ Spring Framework
                     for a given viewName 'index'
                     View is resolved as '/WEB-INF/pages/index.jsp'
 
+        @ReqeustMapping
+            |
+            |- @GetMapping
+            |- @PostMapping
+
+        @RequestParam           used to retrive one single param from the reqeust.
+
+        
