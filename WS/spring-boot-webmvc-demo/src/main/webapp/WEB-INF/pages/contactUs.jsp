@@ -1,4 +1,4 @@
-<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <html>
 	<head>
@@ -10,26 +10,25 @@
 	
 		<h3>Contact Us</h3>
 		
-		<form>
+		<form:form method="POST" modelAttribute="visitor">
 			<div>
-				<label>Title:
-					<select name="title" required>
-						<option value="Mr.">Mr.</option>
-						<option value="Ms.">Ms.</option>
-						<option value="Dr.">Dr.</option>
-						<option value="Prof.">Prof.</option>
-					</select> 
-				 </label>
+				<form:label path="title">Title </form:label>
+				<form:select path="title">
+					<form:options items="${titles}"/>
+				</form:select>
 			</div>
 			<div>
-				<label>Name: <input type="text" name="nm" required /> </label>
+				<form:label path="fullName">Full Name</form:label>
+				<form:input path="fullName"/>
 			</div>
 			<div>
-				<label>Email Id: <input type="email" name="mailId" required /> </label>
+				<form:label path="mailId">Mail Id</form:label>
+				<form:input path="mailId"/>
 			</div>
-			<button>Please contact me</button>
-		</form>
-		
+			<div>
+				<button>Please Contact Me</button>
+			</div>
+		</form:form>
 		
 	</body>
 </html>

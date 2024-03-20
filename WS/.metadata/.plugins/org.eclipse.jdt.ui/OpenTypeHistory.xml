@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=spring-ioc-demo/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.cts.iocdemo.service{GreetService.java[GreetService" modifiers="513" timestamp="1709709371052"/>
+    <typeInfo handle="=spring-boot-webmvc-demo/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.cts.webdemo.model.service{LoanService.java[LoanService" modifiers="513" timestamp="1710918147537"/>
 </typeInfoHistroy>
