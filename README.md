@@ -444,5 +444,7 @@ Spring Framework
             |- @PostMapping
 
         @RequestParam           used to retrive one single param from the reqeust.
+        @ModelAttribute         used to retrive all data from a form into a Java Object.
+                                used to pass data from controller to view.
 
         

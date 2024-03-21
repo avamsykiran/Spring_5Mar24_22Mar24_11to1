@@ -11,8 +11,20 @@
 		<h3>Loan Us</h3>
 		
 		<form:form method="POST" modelAttribute="loan">
+			<div>			
+				<form:label path="principal">Capital Amount</form:label>
+			    <form:input path="principal" type="number"/>
+		    </div>
+		    <div>
+		        <form:label path="rateOfInterest">Rate of Interest (0 to 1): </form:label>
+		        <form:input path="rateOfInterest" type="decimal"/>
+		    </div>
+		    <div>
+		        <form:label path="timePeriod">Loan Tenure</form:label>
+		        <form:input path="timePeriod" type="number"/>
+		    </div>
 			<div>
-				<button>Please Contact Me</button>
+				<button>Compute</button>
 			</div>
 		</form:form>		
 		
