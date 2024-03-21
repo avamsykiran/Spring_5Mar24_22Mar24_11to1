@@ -12,7 +12,6 @@ INDEX VERSION 1.131+C:\Cognizant\ongoing\Spring_5Mar24_22Mar24_11to1\WS\.metadat
 1011310958.index
 3811697572.index
 2629122899.index
-4124128483.index
 4163701371.index
 608161816.index
 3504225059.index
@@ -22,7 +21,6 @@ INDEX VERSION 1.131+C:\Cognizant\ongoing\Spring_5Mar24_22Mar24_11to1\WS\.metadat
 1019269603.index
 3711114352.index
 290840908.index
-2083633121.index
 2705004605.index
 2366822646.index
 1455232698.index
@@ -87,7 +85,6 @@ INDEX VERSION 1.131+C:\Cognizant\ongoing\Spring_5Mar24_22Mar24_11to1\WS\.metadat
 3426694032.index
 612257450.index
 3559934041.index
-3399952092.index
 821858410.index
 3864705861.index
 2660387906.index
