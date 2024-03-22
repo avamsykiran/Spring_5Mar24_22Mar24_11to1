@@ -25,6 +25,7 @@
 							<th>Mobile</th>
 							<th>Mail </th>
 							<th>Date Of Birth</th>
+							<th>Actions</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -35,6 +36,10 @@
 								<td>${c.mobileNumber }</td>
 								<td>${c.meilId }</td>
 								<td>${c.dateOfBith }</td>
+								<td>
+									<a class="btn btn-sm btn-secondary" href="/contacts/edit?cid=${c.contactId }">EDIT</a>
+									<a class="btn btn-sm btn-danger ml-1" href="/contacts/del?cid=${c.contactId }">DELETE</a>
+								</td>
 							</tr>
 						</c:forEach>
 					</tbody>

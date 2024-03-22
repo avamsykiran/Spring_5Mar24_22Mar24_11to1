@@ -60,5 +60,9 @@ public class ContactServiceImpl implements ContactService {
 		return contactRepo.findAllBornBetween(start, end);
 	}
 
+	@Override
+	public Contact update(Contact contact) {
+		return contactRepo.save(contact);
+	}
 	
 }

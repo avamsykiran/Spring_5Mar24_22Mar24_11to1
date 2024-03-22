@@ -8,6 +8,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 @Entity
 @Table(name="contacts")
@@ -16,9 +25,25 @@ public class Contact {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer contactId;
+	
+	@NotNull(message = "Full Name is a mandatory field")
+	@NotBlank(message = "Full Name is a mandatory field")
+	@Size(min = 5,max=25,message = "Full Name must be between 5 and 25 characters in length")
 	private String fullName;
+	
+	@NotNull(message = "Mobile Number is a mandatory field")
+	@NotBlank(message = "Mobile Number is a mandatory field")
+	@Pattern(regexp = "[1-9][0-9]{9}",message = "Mobile Number must be a ten digit number")
 	private String mobileNumber;
+	
+	@NotNull(message = "Mail Id is a mandatory field")
+	@NotBlank(message = "Mail Id is a mandatory field")
+	@Email(message = "Please provide a valid mail id")
 	private String meilId;
+	
+	@NotNull(message = "Date of Birth is a mandatory field")
+	@PastOrPresent(message = "Date Of Birth can not be a future date")
+	@DateTimeFormat(iso = ISO.DATE)
 	private LocalDate dateOfBith;
 	
 	public Contact() {
