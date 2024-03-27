@@ -447,4 +447,47 @@ Spring Framework
         @ModelAttribute         used to retrive all data from a form into a Java Object.
                                 used to pass data from controller to view.
 
-        
+        Thymeleaf
+            
+            The Thymeleaf is an open-source Java library that is licensed under the Apache License 2.0. It is a HTML5/XHTML/XML template engine. It provides full integration with Spring Framework.
+
+            Thymeleaf supports 
+                variable expressions (${...}) like Spring EL and executes on model attributes
+                asterisk expressions (*{...}) execute on the form backing bean (modelAttributes)
+                hash expressions (#{...}) are for internationalization
+                link expressions (@{...}) rewrite URLs.
+
+            <dependency>  
+                <groupId>org.springframework.boot</groupId>  
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>  
+            </dependency>  
+
+            To activate thymeleaf on .html
+                
+                <html lang="en" xmlns:th="http://www.thymeleaf.org">  
+            
+            application.properties
+
+                spring.thymeleaf.cache=false  
+                spring.thymeleaf.suffix=.html  
+            
+            Thymeleaf HTML attributes
+
+                th:text
+                th:value
+                th:field
+                th:object
+                th:href
+                th:if
+                th:class
+                th:each="loopingVariable : ${arrayOrListOrSet}"
+                th:insert
+                th:replace
+            
+                data-th-text
+                data-th-field
+                data-th-value
+                        ...etc., for html 5
+
+            For a deep reading:
+                https://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html
